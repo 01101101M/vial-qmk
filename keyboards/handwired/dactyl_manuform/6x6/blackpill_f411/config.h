@@ -18,12 +18,11 @@
 
 #include "config_common.h"
 
-#undef SOFT_SERIAL_PIN
 
 #define MATRIX_ROW_PINS          { B12, B13, B14, B15, A8 , A9, A10}
 #define MATRIX_COL_PINS          { B1, B0, A7, A6, A5, A4}
 /* COL2ROW, ROW2COL */
-#define DIODE_DIRECTION COL2ROW
+#define DIODE_DIRECTION ROW2COL
 
 #define BOOTMAGIC_LITE_ROW          0
 #define BOOTMAGIC_LITE_COLUMN       0
@@ -37,9 +36,6 @@
 
 /* connection */
 #define SERIAL_USART_FULL_DUPLEX   // Enable full duplex operation mode.
-#define SOFT_SERIAL_PIN B6     // USART TX pin
-#define SERIAL_USART_RX_PIN B7     // USART RX pin
-#define SERIAL_USART_TX_PIN SOFT_SERIAL_PIN     // USART TX pin
 
 #define SELECT_SOFT_SERIAL_SPEED 1 // or 0, 2, 3, 4, 5
                                    //  0: 460800 baud
@@ -48,7 +44,7 @@
                                    //  3: 57600 baud
                                    //  4: 38400 baud
                                    //  5: 19200 baud
-#define SERIAL_USART_DRIVER SD1    // USART driver of TX and RX pin. default: SD1
+#define SERIAL_USART_DRIVER SD2    // USART driver of TX and RX pin. default: SD1
 #define SERIAL_USART_TX_PAL_MODE 7 // Pin "alternate function", see the respective datasheet for the appropriate values for your MCU. default: 7
 #define SERIAL_USART_RX_PAL_MODE 7 // Pin "alternate function", see the respective datasheet for the appropriate values for your MCU. default: 7
 #define SERIAL_USART_TIMEOUT 20    // USART driver timeout. default 20
