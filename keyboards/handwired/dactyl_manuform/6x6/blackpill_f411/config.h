@@ -19,8 +19,8 @@
 #include "config_common.h"
 
 
-#define MATRIX_ROW_PINS          { B12, B13, B14, B15, A8 , A9, A10}
-#define MATRIX_COL_PINS          { B1, B0, A7, A6, A5, A4}
+#define MATRIX_ROW_PINS          { B12, B13, B14, B15, A8 , A9, A15}
+#define MATRIX_COL_PINS          { A1, A0, C13, A6, A5, A4}
 /* COL2ROW, ROW2COL */
 #define DIODE_DIRECTION ROW2COL
 
